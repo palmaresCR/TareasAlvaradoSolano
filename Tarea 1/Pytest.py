@@ -31,18 +31,21 @@ def test_string():
    temp6 = num_to_str("string")
    assert temp6 == "error. 422"
 
-#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número negativo, decimal o mayor a 99.
-def test_numeros_no_naturales():
+#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número negativo o mayor a 99.
+def test_numeros_negativos():
    temp7 = num_to_str(-99)
-   assert temp7 == "error. 500"
+   assert temp7 == ("error. 500")
 
-def test_numeros_no_naturales1():
-   temp8 = num_to_str(120)
-   assert temp8 == "error. 500"
+def test_numeros_mayores():
+   tempx = num_to_str(100)
+   assert tempx == ("error. 500")
 
-def test_numeros_no_naturales2():
-   temp9 = num_to_str(54.9)
-   assert temp9 == "error. 500"
+#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número decimal.
+def test_numeros_decimales():
+   temp8 = num_to_str(54.9)
+   assert temp8 == ("error. 422")
+
+
 
 
 
