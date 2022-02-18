@@ -14,15 +14,14 @@ def string_work(par1):
     
 
 def num_to_str (par2):
-   print(par2)
    if type(par2)!= int: #comprobación tipo de entrada  
-      print("error. 422")    
+      #print("error. 422")    
       return "error. 422"
 
    else:
       if par2 < 0 or par2 >= 100:#comprobación rango de entrada
          NRD = "error. 500"
-         print(NRD)
+         #print(NRD)
          return NRD
       
       #if par2 >= 100:#comprobación rango de entrada
@@ -33,5 +32,5 @@ def num_to_str (par2):
       else:
          letras= num2words(par2, lang='es')#uso de librería para leer y reescribir el número
          letras=letras.replace(' ','_') #aquí inserta el guión                     
-         print(letras)
-         return letras      
+         #print(letras)
+         return letras   
