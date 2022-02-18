@@ -20,15 +20,15 @@ def num_to_str (par2):
       return "error. 422"
 
    else:
-      if par2 < 0:#comprobación rango de entrada
+      if par2 < 0 or par2 >= 100:#comprobación rango de entrada
          NRD = "error. 500"
          print(NRD)
          return NRD
       
-      if par2 >= 100:#comprobación rango de entrada
-         NRD2 = "error. 501"
-         print(NRD2)
-         return NRD2
+      #if par2 >= 100:#comprobación rango de entrada
+      #   NRD2 = "error. 501"
+      #   print(NRD2)
+      #   return NRD2
 
       else:
          letras= num2words(par2, lang='es')#uso de librería para leer y reescribir el número
