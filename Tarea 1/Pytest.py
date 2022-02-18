@@ -1,7 +1,6 @@
 import pytest
 from Metodos import*
 
-
 #Una prueba que verifica que el método string_work es capaz de cambiar todos los caracteres de a-Z. Verificando tanto mayúsculas como minúsculas.
 def test_letras():
    temp = string_work("AbCdefG")
@@ -16,6 +15,8 @@ def test_numeros():
 def test_simbolos():
    temp3 = string_work("@")
    assert temp3 == "error. 420"
+
+
    
 #Una prueba que verifica que el método num_to_str puede traducir todos los números desde el 0 al 99 correctamente.
 def test_traducir():
@@ -31,7 +32,7 @@ def test_string():
    temp6 = num_to_str("string")
    assert temp6 == "error. 422"
 
-#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número negativo o mayor a 99.
+#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número negativo, deciaml o mayor a 99.
 def test_numeros_negativos():
    temp7 = num_to_str(-99)
    assert temp7 == ("error. 500")
@@ -40,13 +41,6 @@ def test_numeros_mayores():
    tempx = num_to_str(100)
    assert tempx == ("error. 500")
 
-#Una prueba que verifica que el método num_to_str retorna el error correcto si se le pasa un número decimal.
 def test_numeros_decimales():
    temp8 = num_to_str(54.9)
    assert temp8 == ("error. 422")
-
-
-
-
-
-
