@@ -1,3 +1,6 @@
+# ERR 4x2 -5
+# ERR5x2 -6: No prueba todo el rango de letras, no prueba todos los números
+# de 0 a 99
 import pytest
 from Metodos import*
 
